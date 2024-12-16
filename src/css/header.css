@@ -59,7 +59,13 @@
   color: #111;
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+}
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: #fd9222;
+  outline: none;
 }
 
 .header-soc-list {
@@ -90,6 +96,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.header-soc-link:hover,
+.header-soc-link:focus {
+  border: 1px solid rgba(253, 146, 34, 0.1);
+}
+
+.header-soc-icon {
+  fill: #111;
+  transition: fill 0.3s ease;
+}
+.header-soc-link:hover .header-soc-icon,
+.header-soc-link:focus .header-soc-icon {
+  fill: #fd9222;
 }
 
 .header-menu-btn {
@@ -113,11 +133,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mob-menu.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 768px) {
   .mob-menu {
     display: none;
   }
+}
+.modal-menu {
 }
 
 .mob-close-btn {
@@ -162,7 +191,17 @@
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .mob-soc-icon {
   fill: #fff;
+  transition: fill 0.3s ease;
+}
+.mob-soc-link:hover,
+.mob-soc-link:focus {
+  border: 1px solid rgba(253, 146, 34, 0.1);
+}
+.mob-soc-link:hover:hover .header-soc-icon,
+..mob-soc-link:focus:focus .header-soc-icon {
+  fill: #fd9222;
 }

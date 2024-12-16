@@ -1,10 +1,17 @@
 .hero {
   padding: 0 20px;
   margin-top: 20px;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 768px) {
   .hero {
     padding: 0 32px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 120px;
   }
 }
 .header-container {
@@ -14,7 +21,6 @@
 }
 
 .hero-container-item {
-  border-radius: 30px;
   border-radius: 30px;
   background-image: linear-gradient(
       rgba(17, 17, 17, 0.4),
@@ -82,9 +88,10 @@
   }
 }
 .hero-buttons {
+  width: 299px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 14px;
 }
@@ -94,6 +101,12 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-right: 40px;
+    width: 624px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-buttons {
+    width: 1056px;
   }
 }
 .hero-btn {
